@@ -13,7 +13,8 @@ only vanilla python without any GUI. Bugs are expected, please report if you fin
 
 
 class Warrior:
-    def __init__(self, attack, defense, life):
+    def __init__(self, name, attack, defense, life):
+        self.name = name
         self.attack = attack
         self.defense = defense
         self.life = life
@@ -21,7 +22,8 @@ class Warrior:
 
 
 class Mage:  # In development
-    def __init__(self, attack, magicatk, defense, life, mana):
+    def __init__(self, name, attack, magicatk, defense, life, mana):
+        self.name = name
         self.attack = attack
         self.magicatk = magicatk
         self.defense = defense
@@ -148,9 +150,10 @@ def create_warrior():
     life = int(input("\nfinally, what's your max life?\n\n"))
     attributes = attack + defense + life
     if attributes == 50 and life >= 1 and attack >= 0 and defense >= 0:
-        print(f"\nExcellent! Now you have a warrior with {attack} attack, {defense} defense and "
+        name = hero_name()
+        print(f"\nExcellent! Now you are {name}, a warrior with {attack} attack, {defense} defense and "
               f"{life} max life!")
-        hero = Warrior(attack, defense, life)
+        hero = Warrior(name, attack, defense, life)
         return hero
     elif life <= 1:
         print("\nYou can't live without life! Try again!")
@@ -174,6 +177,11 @@ def create_mage():
 
 def create_rogue():
     pass  # should be included in the future
+
+
+def hero_name():
+    name = input("\nAnd what is your name?\n\n")
+    return name
 
 
 '''combat functions - Start!'''
