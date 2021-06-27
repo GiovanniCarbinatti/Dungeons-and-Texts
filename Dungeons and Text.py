@@ -143,8 +143,8 @@ def create_hero():
 def create_warrior():
     print("\nWarrior is a nice choice!\n"
           "You must distribute 50 points between attack, defense and life. Choose wisely!\n")
-    attack = int(input("what's your warrior's attack? (Remember: war tanks must shoot!\n\n"))
-    defense = int(input("\nwhat's your warrior's defense? (Remember: a glass cannon breaks on the first attack!\n\n"))
+    attack = int(input("what's your warrior's attack? (Remember: war tanks must shoot!)\n\n"))
+    defense = int(input("\nwhat's your warrior's defense? (Remember: a glass cannon breaks on the first attack!)\n\n"))
     life = int(input("\nfinally, what's your max life?\n\n"))
     attributes = attack + defense + life
     if attributes == 50 and life >= 1 and attack >= 0 and defense >= 0:
