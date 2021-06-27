@@ -83,7 +83,7 @@ zombie = Zombie("zombie", 14, 0, 35)
 
 
 def main():
-    print("Welcome to \033Dungeons And Texts!\033")
+    print("Welcome to \033[1;30;47mDungeons And Texts!\033[0;0m")
     menu()
 
 
